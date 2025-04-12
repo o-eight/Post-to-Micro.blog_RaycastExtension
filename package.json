@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "post-to-micro-blog",
-  "title": "Post to Micro.blog",
-  "description": "Unofficial: A simple extension for posting short text to Micro.blog",
+  "name": "micro-blog-unofficial",
+  "title": "Micro.blog (Unofficial)",
+  "description": "Unofficial Extension for Micro.blog",
   "icon": "extension-icon.png",
   "author": "o-eight",
   "categories": [
@@ -12,8 +12,9 @@
   "commands": [
     {
       "name": "index",
-      "title": "Post to Micro.blog",
-      "description": "Post a message to Micro.blog",
+      "title": "Post Message",
+      "subtitle": "Micro.blog",
+      "description": "Post a short-message to Micro.blog",
       "mode": "view"
     }
   ],

@@ -17,13 +17,13 @@ An extension for posting short messages directly to Micro.blog from Raycast.
 1. Open Raycast
 2. Press "⌘+," to open settings
 3. Select the "Extensions" tab
-4. Find the "Post to Micro.blog" extension
+4. Find the "Post Message" extension
 5. Paste the copied token into the "Micropub API Token" field
 
 ## Usage
 
 1. Open Raycast
-2. Type "Post to Micro.blog"
+2. Type "Post Message"
 3. Enter your post content
 4. Press Enter to post
 
@@ -58,13 +58,13 @@ Raycastから直接Micro.blogに短文を投稿するための拡張機能です
 1. Raycastを開きます
 2. 「⌘+,」キーを押して設定を開きます
 3. 「拡張機能」タブを選択します
-4. 「Micro.blog投稿」拡張機能を探します
+4. 「Post Message」拡張機能を探します
 5. 「Micropub APIトークン」欄にコピーしたトークンを貼り付けます
 
 ## 使い方
 
 1. Raycastを開きます
-2. 「Post to Micro.blog」と入力します
+2. 「Post Message」と入力します
 3. 投稿内容を入力します
 4. Enterキーを押して投稿します
 
