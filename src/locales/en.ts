@@ -7,6 +7,7 @@ export default {
   "posted": "Posted successfully",
   "emptyContentError": "Please enter content to post",
   "postFailed": "Failed to post",
+  "charactersCount": "characters",
   
   // Auth and Settings
   "missingToken": "API token not configured",

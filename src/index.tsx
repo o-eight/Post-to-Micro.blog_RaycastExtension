@@ -69,6 +69,7 @@ export default function Command() {
         value={content}
         onChange={setContent}
       />
+      <Form.Description text={`${content.length} ${t("charactersCount")}`} />
     </Form>
   );
 }

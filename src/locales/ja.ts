@@ -7,6 +7,7 @@ export default {
   "posted": "投稿しました",
   "emptyContentError": "投稿内容を入力してください",
   "postFailed": "投稿に失敗しました",
+  "charactersCount": "文字",
   
   // 認証と設定
   "missingToken": "APIトークンが設定されていません",
