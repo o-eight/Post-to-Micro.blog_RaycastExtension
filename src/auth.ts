@@ -1,4 +1,5 @@
 import { getPreferenceValues } from "@raycast/api";
+import { t } from "./locales"; // ローカライズユーティリティをインポート
 
 interface Preferences {
   micropubToken: string;
@@ -9,7 +10,7 @@ export function getAccessToken(): string {
   const preferences = getPreferenceValues<Preferences>();
   
   if (!preferences.micropubToken) {
-    throw new Error("Micropub APIトークンが設定されていません。Raycastの設定から入力してください。");
+    throw new Error(t("missingTokenError"));
   }
   
   return preferences.micropubToken;

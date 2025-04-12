@@ -20,18 +20,36 @@
   "preferences": [
     {
       "name": "micropubToken",
-      "title": "Micropub APIトークン",
-      "description": "Micro.blogのウェブサイトから取得したアクセストークン",
+      "title": "Micropub API Token",
+      "description": "Access token obtained from your Micro.blog website",
       "type": "password",
       "required": true
     },
     {
       "name": "micropubEndpoint",
       "title": "Micropub Endpoint",
-      "description": "Micropub APIのエンドポイント（通常はhttps://micro.blog/micropub）",
+      "description": "Micropub API endpoint (usually https://micro.blog/micropub)",
       "type": "textfield",
       "required": false,
       "default": "https://micro.blog/micropub"
+    },
+    {
+      "name": "language",
+      "title": "Language",
+      "description": "Select the language for the extension",
+      "type": "dropdown",
+      "required": false,
+      "default": "en",
+      "data": [
+        {
+          "title": "English",
+          "value": "en"
+        },
+        {
+          "title": "日本語",
+          "value": "ja"
+        }
+      ]
     }
   ],
   "dependencies": {

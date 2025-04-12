@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import { getAccessToken, getMicropubEndpoint } from "./auth";
+import { t } from "./locales"; // ローカライズユーティリティをインポート
 
 // Micro.blogへの投稿関数
 export async function postToMicroBlog(content: string) {
@@ -20,7 +21,7 @@ export async function postToMicroBlog(content: string) {
   
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`投稿に失敗しました (${response.status}): ${errorText}`);
+    throw new Error(t("postFailedWithStatus", response.status, errorText));
   }
   
   return await response.json();

@@ -1,6 +1,7 @@
 import { Form, ActionPanel, Action, showToast, Toast, getPreferenceValues } from "@raycast/api";
 import React, { useState, useCallback, useEffect } from "react";
 import { postToMicroBlog } from "./micropub";
+import { t } from "./locales"; // ローカライズユーティリティをインポート
 
 interface Preferences {
   micropubToken: string;
@@ -16,8 +17,8 @@ export default function Command() {
     if (!preferences.micropubToken) {
       showToast({
         style: Toast.Style.Failure,
-        title: "APIトークンが設定されていません",
-        message: "Raycastの設定からMicropub APIトークンを設定してください"
+        title: t("missingToken"),
+        message: t("configureToken")
       });
     }
   }, []);
@@ -26,7 +27,7 @@ export default function Command() {
     if (!content.trim()) {
       await showToast({
         style: Toast.Style.Failure,
-        title: "投稿内容を入力してください"
+        title: t("emptyContentError")
       });
       return;
     }
@@ -37,14 +38,14 @@ export default function Command() {
       await postToMicroBlog(content);
       await showToast({
         style: Toast.Style.Success,
-        title: "投稿しました"
+        title: t("posted")
       });
       setContent("");
     } catch (error) {
       console.error(error);
       await showToast({
         style: Toast.Style.Failure,
-        title: "投稿に失敗しました",
+        title: t("postFailed"),
         message: String(error)
       });
     } finally {
@@ -57,14 +58,14 @@ export default function Command() {
       isLoading={isLoading}
       actions={
         <ActionPanel>
-          <Action.SubmitForm title="投稿" onSubmit={handleSubmit} />
+          <Action.SubmitForm title={t("postButton")} onSubmit={handleSubmit} />
         </ActionPanel>
       }
     >
       <Form.TextArea
         id="content"
-        title="投稿内容"
-        placeholder="ここに投稿内容を入力..."
+        title={t("postContent")}
+        placeholder={t("postContentPlaceholder")}
         value={content}
         onChange={setContent}
       />
